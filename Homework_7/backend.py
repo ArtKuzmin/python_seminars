@@ -5,7 +5,9 @@ counter = 1 # каунтер добавил, чтобы при добавлен�
 def add_adress(adress):
     global counter
     global adress_book
-    if counter < max(adress_book):
+    if not adress_book:
+        counter =1
+    else:
         counter = max(adress_book) + 1
     adress_book[counter] = (adress)
     print(adress_book)
