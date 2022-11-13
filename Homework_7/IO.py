@@ -9,6 +9,6 @@ def read_adress():
 
 
 def write_adress():
-    with open("file.json", "w") as data:
+    with open("file.json", "a") as data:
         json.dump(backend.adress_book, data)
     data.close
