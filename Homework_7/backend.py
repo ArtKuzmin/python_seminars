@@ -1,12 +1,12 @@
 adress_book = dict()
-counter = 1 # каунтер добавил, чтобы при добавлении новой записи после импорта из файла не было конфлита по id и перезаписи
+counter = 1  # каунтер добавил, чтобы при добавлении новой записи после импорта из файла не было конфлита по id и перезаписи
 
 
 def add_adress(adress):
     global counter
     global adress_book
     if not adress_book:
-        counter =1
+        counter = 1
     else:
         counter = max(adress_book) + 1
     adress_book[counter] = (adress)
