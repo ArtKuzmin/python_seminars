@@ -8,16 +8,16 @@ def add_adress():
 
 
 def delete_adress():
-    backend.delete_adress(
-        input("Введите Введите id, который вы хотите удалить: "))
-    return f"Запись с id {input} удалена"
+    id = input("Введите Введите id, который вы хотите удалить: ")
+    backend.delete_adress(id)
+    return f"Запись с id {id} удалена"
 
 
 def get_adress():
     id = input("Введите Введите id, который вы хотите получить: ")
     data = backend.get_adress(id)
     if data == None:
-        return "Нет записи с таким id"
+        return f"Нет записи с таким id {id}"
     else:
         return data
 

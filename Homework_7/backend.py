@@ -8,9 +8,8 @@ def add_adress(adress):
     if not adress_book:
         counter = 1
     else:
-        counter = max(adress_book) + 1
-    adress_book[counter] = (adress)
-    print(adress_book)
+        counter = int(max(adress_book)) + 1
+    adress_book[str(counter)] = [adress.split(" ")]
     counter += 1
 
 
@@ -22,3 +21,4 @@ def delete_adress(id):
 def get_adress(id):
     global adress_book
     return adress_book.get(id)
+
